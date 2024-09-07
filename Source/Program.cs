@@ -9,6 +9,7 @@ namespace CopyDialogLunarLander
         static void Main(string[] args)
         {
             CopyWatcherApplication app = new CopyWatcherApplication();
+            BadAppleFrameSource.init();
             app.Run();
         }
     }

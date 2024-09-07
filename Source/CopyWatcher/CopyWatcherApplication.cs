@@ -74,7 +74,7 @@ namespace CopyDialogLunarLander
                 _currentGame = typeof(LunarLanderOverlayWindow);
                 foreach (var derivedType in types)
                 {
-                    var game = (System.Windows.Forms.ToolStripMenuItem)gamesMenu.DropDownItems.Add("Lunar Lander");
+                    var game = (System.Windows.Forms.ToolStripMenuItem)gamesMenu.DropDownItems.Add(derivedType.Name);
                     game.Checked = derivedType == _currentGame;
                     game.Click += GameChanged;
                     _games.Add(new Game { type = derivedType, menuItem = game });
